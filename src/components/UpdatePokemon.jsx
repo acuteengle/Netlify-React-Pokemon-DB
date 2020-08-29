@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
   },
+  input: {
+    margin: 5,
+  },
 }));
 
 const UpdatePokemon = () => {
@@ -85,18 +88,21 @@ const UpdatePokemon = () => {
         onChange={onIdChange}
         label="Pokemon ID"
         variant="outlined"
+        className={styles.input}
       />
       <TextField
         value={updateName}
         onChange={onNameChange}
         label="Name"
         variant="outlined"
+        className={styles.input}
       />
       <TextField
         value={updateType}
         onChange={onTypeChange}
         label="Type"
         variant="outlined"
+        className={styles.input}
       />
       <TextField
         value={updateAttack}
@@ -104,6 +110,7 @@ const UpdatePokemon = () => {
         type="number"
         label="Attack"
         variant="outlined"
+        className={styles.input}
       />
       <TextField
         value={updateHP}
@@ -111,8 +118,8 @@ const UpdatePokemon = () => {
         type="number"
         label="Hitpoints"
         variant="outlined"
+        className={styles.input}
       />
-      <br />
       <Button onClick={onSubmit} variant="contained" disabled={processing}>
         PUT
       </Button>

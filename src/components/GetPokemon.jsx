@@ -14,6 +14,9 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
   },
+  input: {
+    margin: 5,
+  },
 }));
 
 const GetPokemon = () => {
@@ -57,8 +60,8 @@ const GetPokemon = () => {
         onChange={onIdChange}
         label="Pokemon ID"
         variant="outlined"
+        className={styles.input}
       />
-      <br />
       <Button onClick={onSubmit} variant="contained" disabled={processing}>
         GET
       </Button>
